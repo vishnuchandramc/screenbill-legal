@@ -14,75 +14,64 @@
 </style>
 </head>
 <body>
-<h1>ScreenBill — Privacy Policy</h1>
-<p class="meta">App: <strong>ScreenBill</strong> (package <code>com.studiomono.billed</code>) ·
-Developer: <strong>Studio Mono</strong> · Effective: <strong>September 22, 2026</strong></p>
-
-<p>ScreenBill shows you a daily "bill" for your phone usage. It is built so that your
-usage data stays on your device. This policy explains what the app reads, what (if
-anything) leaves your phone, and the choices you have.</p>
-
-<h2>The short version</h2>
-<ul>
-  <li>Your screen-time data is processed and stored <strong>on your device only</strong>.</li>
-  <li>ScreenBill has <strong>no user accounts</strong>, <strong>no ads</strong>, and
-      <strong>no third-party analytics or tracking SDKs</strong>.</li>
-  <li>We do not sell, share, or monetize your data in any way.</li>
-  <li>Uninstalling the app deletes all of its data.</li>
-</ul>
-
-<h2>Data the app reads on your device</h2>
-<p>With your permission, ScreenBill reads Android's <em>usage access</em> statistics
-(the same data source Android's Digital Wellbeing uses): which apps were in the
-foreground and when, and screen on/off and unlock events. From this the app computes
-your daily totals, per-app breakdown, device pickups, and after-midnight usage.</p>
-<p>All of this is computed and stored in a local database on your device. It is never
-uploaded, synced, or backed up to any server by ScreenBill.</p>
-
-<h2>Permissions the app asks for</h2>
-<ul>
-  <li><strong>Usage access</strong> — to read the screen-time statistics described above.</li>
-  <li><strong>Notifications</strong> — to deliver your one daily bill notification (and an
-      optional morning summary you can enable).</li>
-  <li><strong>Do Not Disturb access</strong> (optional) — only if you use Goodnight mode,
-      which turns Do Not Disturb on at night and off at your wake time. The app does not
-      read your notifications.</li>
-</ul>
-
-<h2>Optional AI roast (off by default)</h2>
-<p>The bill can include a short humorous remark. By default this is generated
-<strong>entirely on your device</strong> from templates. If you explicitly enable the
-optional AI roast feature (when offered), the app sends a small, anonymous summary of
-that day's usage (for example: total time, pickups, and the name of your most-used app)
-to our server to generate the remark. This payload contains no account identifier, is
-used only to produce the roast, and is <strong>not stored</strong> on the server. You can
-turn the feature off at any time, and the app falls back to on-device templates.</p>
-
-<h2>Purchases</h2>
-<p>Optional purchases (subscriptions, one-time unlocks, bill skins) are processed by
-<strong>Google Play Billing</strong>. We never see or store your payment details. Google's
-handling of payment data is described in Google's own privacy policy. Purchase state is
-cached on your device so your unlocks work offline.</p>
-
-<h2>Sharing images</h2>
-<p>If you use the Share feature, the app renders an image of your bill and hands it to
-the app you choose (for example WhatsApp). That happens only when you tap share, only
-with the image you previewed, and you can hide private apps from the shared copy first.</p>
-
-<h2>Data retention &amp; deletion</h2>
-<p>Everything the app stores lives on your device. Clearing the app's storage or
-uninstalling it permanently deletes your data. There is no server-side copy to delete.</p>
-
-<h2>Children</h2>
-<p>ScreenBill is not directed at children under 13, and we do not knowingly collect
-personal information from anyone.</p>
-
-<h2>Changes to this policy</h2>
-<p>If the app's data practices change (for example when new features launch), this page
-will be updated and the effective date revised. Material changes will also be surfaced
-in the app.</p>
-
-<h2>Contact</h2>
-<p>Questions or requests: <a href="mailto:studiomono.dev@gmail.com">studiomono.dev@gmail.com</a></p>
+<h1>Your bill is nobody else's business.</h1>
+    <p class="meta">Last updated 25 October 2026 · Applies to the ScreenBill Android app (package com.studiomono.billed), published by Studio Mono.</p>
+    <section>
+      <h2>The short version</h2>
+      <ul>
+        <li>ScreenBill has no accounts. We do not know who you are.</li>
+        <li>Your usage data stays on your phone. We do not upload it, sync it, or sell it.</li>
+        <li>There are no ads, no analytics and no tracking. The app uses Google Firebase Remote Config only to switch app features on or off.</li>
+        <li>One optional feature, the AI roast, sends a few numbers from your bill to our server for a moment. It is off by default, and nothing is stored.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>What the app reads on your phone</h2>
+      <p>ScreenBill asks for <b>usage access</b> (the <code>PACKAGE_USAGE_STATS</code> permission). With it, the app reads Android's app usage timers: which apps were in the foreground and when the screen was unlocked. This is the same data the Digital Wellbeing feature uses. From it, the app computes your daily total, per-app time, pickups, first pickup and after-midnight time. It never sees what you do inside an app, your messages, or your browsing.</p>
+      <p>All of this is stored in a database on your device only. Deleting the app deletes it.</p>
+      <p>Other permissions the app may ask for, and why:</p>
+      <ul>
+        <li><b>Notifications</b>: to post the once-a-day "Your bill is ready" notification and the optional morning summary.</li>
+        <li><b>Do Not Disturb access</b>: Goodnight mode turns Priority Do Not Disturb on for the night and off at your wake time. Nothing is read from your notifications.</li>
+        <li><b>Run at startup</b>: to re-arm the bill-time alarm after a reboot.</li>
+        <li><b>Storage</b> (Android 9 only): to save a shared bill or certificate image to your Pictures folder when you ask.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Sharing a bill</h2>
+      <p>When you tap Share, the app renders the bill as an image and hands it to the app you choose. Nothing leaves your phone unless you send it. The "hide private apps" option removes dating, finance and health apps, and any apps you mark, from the shared image.</p>
+    </section>
+    <section>
+      <h2>The AI roast (optional, off by default)</h2>
+      <p>If you buy ScreenBill Pro and switch on the AI roast, once a day at bill time (and when you tap re-roast) the app sends these values to a server run by us on Cloudflare: the date, your total screen time, your slab, pickup count, first pickup time, after-midnight time, the name of your top app and its time, and your chosen roast style. The server forwards them to Google's Gemini API to write one roast line and one suggestion, and returns them to your phone.</p>
+      <p>Our server does not log request contents and stores nothing. The request carries no account, name, device identifier or advertising ID. Google processes the request under its <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API terms</a>. If the request fails or you switch the feature off, the app uses its built-in roast templates instead.</p>
+    </section>
+    <section>
+      <h2>Purchases</h2>
+      <p>Pro subscriptions, the lifetime unlock and bill skins are sold through Google Play. Google handles payment and we never see your payment details. To confirm a purchase is genuine, the app may send the purchase token Google gave it to our server, which checks it with the Google Play Developer API and returns the result. We do not store purchase tokens or build a record of your purchases; your phone keeps its own entitlement cache.</p>
+    </section>
+    <section>
+      <h2>Feature settings (Firebase Remote Config)</h2>
+      <p>When the app starts, it asks Google's <b>Firebase Remote Config</b> service for a small set of on/off feature settings, for example which welcome screens to show. This lets us turn a feature off quickly if something goes wrong, without an app update.</p>
+      <p>To do this, Firebase creates a random identifier for this installation of the app (a Firebase installation ID) and sends it with the request, together with basic technical details such as the app version, Android version, language and time zone. The identifier is not linked to your name, account or advertising ID, and it is reset if you delete and reinstall the app. <b>None of your usage data is sent.</b> Google processes this under its <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy terms</a>.</p>
+      <p>We do not use Firebase for analytics, crash reporting or advertising. If the request fails, the app uses its built-in settings and works normally.</p>
+    </section>
+    <section>
+      <h2>What we do not do</h2>
+      <ul>
+        <li>No accounts, sign-in or email collection.</li>
+        <li>No advertising, ad SDKs or advertising identifiers.</li>
+        <li>No analytics, crash reporting or tracking. Firebase is used only for the feature settings above.</li>
+        <li>No selling, renting or sharing of personal data with anyone.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Children</h2>
+      <p>ScreenBill is not directed at children under 13 and does not knowingly collect personal information from anyone.</p>
+    </section>
+    <section>
+      <h2>Changes and contact</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new date. Questions go to <b>studiomono.dev@gmail.com</b>.</p>
+    </section>
 </body>
 </html>
